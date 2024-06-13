@@ -1,16 +1,9 @@
 {
-    "routes": [
+    "rewrites": [
       {
-        "src": "/signIn",
-        "dest": "/index.html"
-      },
-      {
-        "handle": "filesystem"
-      },
-      {
-        "src": "/.*",
-        "status": 404,
-        "dest": "/404.html"
+        "source": "/(.*)",
+        "destination": "/index.html"
       }
     ]
   }
+  
