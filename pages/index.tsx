@@ -9,7 +9,7 @@ import Footer from '../components/Footer';
 import PersonaSection from '../components/PersonaSection';
 import Navbar from '../components/Navbar';
 import Contact from "../components/Contact";
-
+import InfoVideo from "../components/IntroVideo"
 export default function HomePage() {
   return (
     <div className="w-full">
@@ -18,6 +18,7 @@ export default function HomePage() {
         <Hero />
         <Features />
         <PersonaSection />
+        <InfoVideo/>
         <Pricing />
         <Partners />
         <Testimonials />

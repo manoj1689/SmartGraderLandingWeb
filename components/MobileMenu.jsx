@@ -2,19 +2,20 @@ import React from "react";
 import Link from "next/link";
 import { MdArrowOutward } from "react-icons/md";
 import { FaUser, FaSignInAlt } from 'react-icons/fa'; 
-
+import { useNavigate } from "react-router-dom";
 const MobileMenu = () => {
+  const navigate = useNavigate();
   return (
     <nav className="lg:hidden bg-white shadow-md absolute w-full top-full left-0">
       <ul className="flex flex-col items-center py-4 space-y-4">
         <li>
-          <Link href="#home">
+          <span onClick={()=>navigate("/")} >
             <span className="text-gray-900 hover:text-blue-700 font-spline transition duration-300">Home</span>
-          </Link>
+          </span>
         </li>
         <li>
-          <Link href="#how-it-works">
-            <span className="text-gray-900 hover:text-blue-700 font-spline transition duration-300">How It Works</span>
+          <Link href="https://chatgpt.com/g/g-QcBTxz9bF-smartgrader-assistant">
+            <span className="text-gray-900 hover:text-blue-700 font-spline transition duration-300">Chat with our docs</span>
           </Link>
         </li>
         <li>
@@ -24,15 +25,15 @@ const MobileMenu = () => {
         </li>
         <li>
           <Link href="#partners">
-            <span className="text-gray-900 hover:text-blue-700 transition font-spline duration-300">Partners</span>
+            <span className="text-gray-900 hover:text-blue-700 transition font-spline duration-300">Joim our Discord</span>
           </Link>
         </li>
         <li>
-          <Link href="/evaluate">
-            <span className="text-gray-900 flex items-center hover:text-blue-700 transition duration-300">
-              Interview <span className="px-2"><MdArrowOutward /></span>
+          <span onClick={()=>navigate("blog")} >
+            <span className="text-gray-900 flex gap-2 items-center hover:text-blue-700 transition duration-300">
+            <span>Blog</span> <span><MdArrowOutward  size={20}/></span>
             </span>
-          </Link>
+          </span>
         </li>
 
         {/* <li>
