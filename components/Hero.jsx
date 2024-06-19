@@ -2,7 +2,7 @@ import React from "react";
 import { FaArrowRight } from 'react-icons/fa'; // Importing icon from react-icons
 import { motion } from 'framer-motion'; // Importing framer-motion for animations
 import Link from "next/link"; // Importing Link for navigation
-
+import IntroVideo from "../components/IntroVideo"
 const Hero = () => {
   return (
     <section className="my-10 pt-16">
@@ -31,9 +31,16 @@ const Hero = () => {
           >
             Gain confidence and improve performance with precise feedback. Our platform leverages advanced technology to enhance interview and evaluation processes. Prepare smarter and excel with our AI-powered assessment solutions.
           </motion.p>
-          <span  onClick={()=>window.location.href = 'https://smart-grader-app-ts.vercel.app/'} className="bg-blue-700 text-white px-6 py-3 mt-6 font-spline text-sm rounded-md hover:bg-blue-800 transition duration-300 flex items-center max-w-max">
-            Get Started with SmartGrader <FaArrowRight className="ml-2" />
-          </span>
+          <div className="flex w-full  justify-between flex-col ">
+      <span 
+        onClick={() => window.location.href = 'https://smart-grader-app-ts.vercel.app/'}
+        className="bg-blue-700 text-white px-6 py-4 mt-6 mb-10 font-spline text-sm rounded-md hover:bg-blue-800 transition duration-300 flex items-center sm:w-7/12 cursor-pointer "
+      >
+        Get Started with SmartGrader <FaArrowRight className="ml-2" />
+      </span>
+      
+    </div>
+        
         </div>
         <motion.div 
           initial={{ opacity: 0, x: 50 }}

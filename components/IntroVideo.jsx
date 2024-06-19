@@ -1,24 +1,24 @@
-import React from 'react';
+import React, { useState } from "react";
 
-const CenteredVideo = () => {
+const VideoOverlay = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const openOverlay = () => setIsOpen(true);
+  const closeOverlay = () => setIsOpen(false);
+
   return (
-    <div className="flex justify-center items-center h-screen bg-gray-100">
-      <div className="w-full max-w-4xl">
-        <div className="relative" style={{ paddingBottom: '56.25%', height: 0 }}>
-          <iframe
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
-            title="YouTube video player"
-            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-            
-            allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-        </div>
-      </div>
+    <div className=" w-full sm:w-10/12 mx-auto  sm:py-5">
+      <video class="h-full w-full rounded-lg" controls>
+    <source
+      src="video/demo.mp4"
+      type="video/mp4"
+    />
+    Your browser does not support the video tag.
+  </video>
+
     </div>
+    
   );
 };
 
-export default CenteredVideo;
-
-
+export default VideoOverlay;

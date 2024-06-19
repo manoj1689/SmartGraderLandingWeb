@@ -4,16 +4,23 @@ import MobileMenu from "./MobileMenu";
 import { FaUser, FaSignInAlt } from "react-icons/fa"; // Importing icons from react-icons
 import { MdArrowOutward } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
+import Demo from "../components/Demo"
+
 const Navbar = () => {
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
-
+  const [demo,setDemo]=useState(false)
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-
+  const handleClose = () => {
+    setDemo(false);
+    // Optionally, you can navigate back to the homepage or another page
+  };
   return (
-    <header className="bg-white shadow-md fixed w-full top-0 z-50">
+    <>
+      <Demo open={demo} onClose={handleClose}/>
+      <header className="bg-white shadow-md fixed w-full top-0 z-50">
       <div className=" bg-sky-400 ">
         {" "}
         <div className="flex flex-col md:flex-row container mx-auto py-1 font-semibold font-spline text-sm text-white justify-between items-center ">
@@ -25,17 +32,17 @@ const Navbar = () => {
         </div>
       </div>
       <div className="container mx-auto px-4 flex flex-row justify-between items-center py-4">
-        <div className="text-lg basis-1/4 font-semibold">
+        <div className="text-lg font-semibold">
           <span onClick={() => navigate("/")}>
             <img
               src="images/home/smart-logo.png"
               alt="Smart Grader Logo"
-              className="h-11 cursor-pointer"
+              className=" cursor-pointer w-32 md:w-44"
             />
           </span>
         </div>
 
-        <nav className="hidden lg:flex basis-1/2 space-x-4 lg:space-x-6 justify-center items-center">
+        <nav className="hidden lg:flex w-full space-x-4 lg:space-x-6 justify-center items-center ">
           <span onClick={() => navigate("/")}>
             <span className="text-gray-900 hover:text-blue-700 font-spline transition duration-300 cursor-pointer">
               Home
@@ -49,16 +56,18 @@ const Navbar = () => {
               Chat with our docs
             </span>
           </Link>
-          <Link href="#pricing" passHref>
-            <span className="text-gray-900 hover:text-blue-700 transition font-spline duration-300 cursor-pointer">
-              Pricing
-            </span>
-          </Link>
-          <Link href="#partners" passHref>
+         
+          
+         
+          <Link href="https://discord.com/invite/mQeEsStC" passHref>
             <span className="text-gray-900 hover:text-blue-700 transition font-spline duration-300 cursor-pointer">
               Join our Discord
             </span>
           </Link>
+          <span className="text-gray-900 hover:text-blue-700 transition font-spline duration-300 cursor-pointer" onClick={()=>setDemo(true)}>
+              Get Demo
+            </span>
+          
           <div onClick={() => navigate("blog")}>
             <span className="text-gray-900 flex  gap-2 justify-center items-center hover:text-blue-700 transition duration-300 cursor-pointer">
               <span>Blog</span>{" "}
@@ -116,6 +125,8 @@ const Navbar = () => {
       </div>
       {isOpen && <MobileMenu />}
     </header>
+    </>
+   
   );
 };
 

@@ -18,15 +18,16 @@ const MobileMenu = () => {
             <span className="text-gray-900 hover:text-blue-700 font-spline transition duration-300">Chat with our docs</span>
           </Link>
         </li>
+      
         <li>
-          <Link href="#pricing">
-            <span className="text-gray-900 hover:text-blue-700 transition font-spline duration-300">Pricing</span>
-          </Link>
-        </li>
-        <li>
-          <Link href="#partners">
+          <Link href="https://discord.com/invite/mQeEsStC">
             <span className="text-gray-900 hover:text-blue-700 transition font-spline duration-300">Joim our Discord</span>
           </Link>
+        </li>
+          <li>
+        
+            <span className="text-gray-900 hover:text-blue-700 transition font-spline duration-300"> Get Demo</span>
+
         </li>
         <li>
           <span onClick={()=>navigate("blog")} >
