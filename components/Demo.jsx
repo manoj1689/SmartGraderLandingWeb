@@ -61,15 +61,20 @@ const Demo = ({ open, onClose }) => {
       const response = await axios.post('/api/send-email', formSubmissionData);
    
       if (response.data.success === true) {
-        toast.success('Email sent successfully');
+        toast.success('Thank you for registering! We will be in touch shortly.',{
+          theme: "light",
+        });
+
         
         
      } else {
-        console.log('Failed to send email');
+      toast.error('Failed to register. Please try again later.');
+
       }
     } catch (error) {
       console.error('Error sending email:', error);
-      toast.error('Failed to send email');
+      toast.error('Failed to register. Please try again later.');
+
     }
 
     // Reset form data
