@@ -21,7 +21,7 @@ export default function HomePage() {
         <IntroVideo/>
         <Partners />
         <Testimonials />
-        
+      
       </div>
     
       <div className="w-full bg-gray-100">

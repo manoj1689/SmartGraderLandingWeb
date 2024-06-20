@@ -3,6 +3,9 @@ import Modal from "react-responsive-modal";
 import Select from "react-select";
 import "react-responsive-modal/styles.css";
 import { FaAsterisk } from "react-icons/fa";
+import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Demo = ({ open, onClose }) => {
   const [formData, setFormData] = useState({
@@ -11,8 +14,7 @@ const Demo = ({ open, onClose }) => {
     whatsappConsent: false,
   });
   const [selectedJobRequisition, setSelectedJobRequisition] = useState(null);
-  const [selectedSourcingCandidate, setSelectedSourcingCandidate] =
-    useState(null);
+  const [selectedSourcingCandidate, setSelectedSourcingCandidate] = useState(null);
 
   const jobRequisitionOptions = [
     { value: "1-10", label: "1-10" },
@@ -35,11 +37,10 @@ const Demo = ({ open, onClose }) => {
       boxShadow: state.isFocused ? "0 0 0 1px #3182CE" : "none",
       "&:hover": {
         border: "1px solid #3182CE",
-        
       },
     }),
   };
-
+  
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     setFormData({
@@ -48,14 +49,28 @@ const Demo = ({ open, onClose }) => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const formSubmissionData = {
       ...formData,
       jobRequisitions: selectedJobRequisition,
       sourcingCandidates: selectedSourcingCandidate,
     };
-    console.log(formSubmissionData);
+
+    try {
+      const response = await axios.post('/api/send-email', formSubmissionData);
+   
+      if (response.data.success === true) {
+        toast.success('Email sent successfully');
+        
+        
+     } else {
+        console.log('Failed to send email');
+      }
+    } catch (error) {
+      console.error('Error sending email:', error);
+      toast.error('Failed to send email');
+    }
 
     // Reset form data
     setFormData({
@@ -65,7 +80,7 @@ const Demo = ({ open, onClose }) => {
     });
     setSelectedJobRequisition(null);
     setSelectedSourcingCandidate(null);
-
+    
     onClose(); // Close modal after form submission
   };
 
@@ -73,7 +88,8 @@ const Demo = ({ open, onClose }) => {
     document.body.style.overflow = open ? "hidden" : "auto";
   }, [open]);
 
-  return (
+  return (<>
+      <ToastContainer/>
     <Modal
       open={open}
       onClose={onClose}
@@ -86,7 +102,10 @@ const Demo = ({ open, onClose }) => {
         },
       }}
     >
+   
       <div className="flex flex-col md:flex-row px-5 py-10 rounded-sm">
+      
+
         <div className="md:w-1/2 flex flex-col px-4 ">
           <img
             src="images/home/smart-logo.png"
@@ -199,7 +218,10 @@ const Demo = ({ open, onClose }) => {
         </div>
       </div>
     </Modal>
+  </>
+
   );
 };
 
 export default Demo;
+
