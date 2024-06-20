@@ -108,10 +108,10 @@ const Demo = ({ open, onClose }) => {
       }}
     >
    
-      <div className="flex flex-col md:flex-row px-5 py-10 rounded-sm">
+      <div className="flex flex-col md:flex-row px-2 sm:px-5 py-10 rounded-sm">
       
 
-        <div className="md:w-1/2 flex flex-col px-4 ">
+        <div className="md:w-1/2 flex flex-col px-2 sm:px-4 ">
           <img
             src="images/home/smart-logo.png"
             alt="Smart Grader Logo"
@@ -127,7 +127,7 @@ const Demo = ({ open, onClose }) => {
             </div>
           </div>
         </div>
-        <div className="md:w-1/2 px-4">
+        <div className="md:w-1/2 px-2 sm:px-4">
           <h2 className="text-lg text-gray-600 font-spline font-bold sm:text-2xl mb-4">
             See Smarter AI Recruiting in Action
           </h2>
@@ -215,9 +215,9 @@ const Demo = ({ open, onClose }) => {
             </div>
             <button
               type="submit"
-              className="mt-4 bg-blue-500 text-white py-3 px-4 rounded-md hover:bg-blue-600 transition duration-300 md:w-3/4"
+              className="bg-[#01AFF4] text-white px-2 sm:px-6 py-3 mt-6 mb-10 font-spline text-sm rounded-md hover:bg-blue-500 transition duration-300 flex cursor-pointer w-full justify-center items-center"
             >
-              <div className="font-spline font-semibold">Get a Demo</div>
+              <div className="font-spline font-medium">Get a Demo</div>
             </button>
           </form>
         </div>

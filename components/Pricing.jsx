@@ -71,7 +71,7 @@ const Pricing = () => {
               <motion.a
                 whileHover={{ scale: 1.05 }}
                 onClick={()=>window.location.href = 'http://smart-grader-app-ts.vercel.app/'}
-                className="bg-[#01AFF4] text-white px-4 py-3 text-sm font-spline rounded-md hover:bg-blue-500 flex items-center justify-center transition-transform duration-300 mt-auto cursor-pointer md:w-10/12"
+                className="bg-[#01AFF4] text-white px-4 py-3 text-sm font-spline rounded hover:bg-blue-500 flex items-center justify-center transition-transform duration-300 mt-auto cursor-pointer md:w-10/12"
               >
                 <span className='font-spline'>Get Started</span>
                 <FaArrowRight className="ml-2" />

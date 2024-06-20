@@ -95,7 +95,7 @@ const OrganizationsSection = () => {
 
 <motion.div 
   whileHover={{ scale: 1.05 }} 
-  className="bg-[#01AFF4] text-white px-2 sm:px-6 py-3 mt-6 mb-10 font-spline text-sm rounded-md hover:bg-blue-500 transition duration-300 flex items-center cursor-pointer w-fit"
+  className="bg-[#01AFF4] text-white px-2 sm:px-6 py-3 mt-6 mb-10 font-spline text-sm rounded hover:bg-blue-500 transition duration-300 flex items-center cursor-pointer w-fit"
   onClick={sendOrganizatopnParam}
 >
   <span>Optimize Your Hiring Process</span>

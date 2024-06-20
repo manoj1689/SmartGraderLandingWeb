@@ -1,11 +1,21 @@
-import React from "react";
+import React,{useState} from "react";
 import Link from "next/link";
 import { MdArrowOutward } from "react-icons/md";
 import { FaUser, FaSignInAlt } from 'react-icons/fa'; 
 import { useNavigate } from "react-router-dom";
+import Demo from "../components/Demo"
 const MobileMenu = () => {
   const navigate = useNavigate();
-  return (
+  const [demo,setDemo]=useState(false)
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+  const handleClose = () => {
+    setDemo(false);
+    // Optionally, you can navigate back to the homepage or another page
+  };
+  return (<>
+    <Demo open={demo} onClose={handleClose}/>
     <nav className="lg:hidden bg-white shadow-md absolute w-full top-full left-0">
       <ul className="flex flex-col items-center py-4 space-y-4">
         <li>
@@ -26,7 +36,9 @@ const MobileMenu = () => {
         </li>
           <li>
         
-            <span className="text-gray-900 hover:text-blue-700 transition font-spline duration-300"> Get Demo</span>
+          <span className="text-gray-900 hover:text-blue-700 transition font-spline duration-300 cursor-pointer" onClick={()=>setDemo(true)}>
+              Get Demo
+            </span>
 
         </li>
         <li>
@@ -54,14 +66,14 @@ const MobileMenu = () => {
       </ul>
       <div className=' flex flex-col w-full justify-center items-center' >
   <button
-  className="bg-white border border-sky-500 max-sm:w-11/12 sm:w-7/12 my-3  text-sky-500 hover:bg-sky-500 hover:text-white font-medium font-spline py-2 px-4 rounded-[1px] transition duration-300 ease-in-out"
+  className="bg-white border border-sky-500 max-sm:w-11/12 sm:w-7/12 my-3  text-sky-500 hover:bg-sky-500 hover:text-white font-medium font-spline py-2 px-4 rounded transition duration-300 ease-in-out"
   onClick={()=>window.location.href = 'http://smart-grader-app-ts.vercel.app/signIn'}
 >
   <span className="text-sky-500">Sign In</span>
 </button>
 
 <button
-  className="bg-sky-500 text-white font-medium font-spline py-2 px-4 max-sm:w-11/12 sm:w-7/12 my-3 rounded-[1px] transition duration-300 ease-in-out  "
+  className="bg-[#01AFF4] hover:bg-blue-500 text-white font-medium font-spline py-2 px-4 max-sm:w-11/12 sm:w-7/12 my-3  rounded transition duration-300 ease-in-out  "
   onClick={()=>window.location.href = 'http://smart-grader-app-ts.vercel.app/createAccount'}
 >
   <span>Sign Up</span>
@@ -72,6 +84,8 @@ const MobileMenu = () => {
   </div>
     </nav>
     
+  </>
+  
   );
 };
 

@@ -21,7 +21,7 @@ const Navbar = () => {
     <>
       <Demo open={demo} onClose={handleClose}/>
       <header className="bg-white shadow-md fixed w-full top-0 z-50">
-      <div className=" bg-sky-400 ">
+      <div className=" bg-[#01AFF4] ">
         {" "}
         <div className="flex flex-col md:flex-row container mx-auto py-1 font-semibold font-spline text-sm text-white justify-between items-center ">
           <span> Welcome to smart Grader!</span>
@@ -95,7 +95,7 @@ const Navbar = () => {
                 "http://smart-grader-app-ts.vercel.app/createAccount")
             }
           >
-            <span className="bg-blue-700 text-white px-4 py-2 font-spline rounded-md hover:bg-blue-800 transition duration-300 flex items-center cursor-pointer">
+            <span className="bg-[#01AFF4] text-white px-4 py-2 font-spline rounded hover:bg-blue-500 transition duration-300 flex items-center cursor-pointer">
               <FaUser className="mr-2" /> Signup
             </span>
           </div>
