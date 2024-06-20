@@ -145,7 +145,7 @@ const Demo = ({ open, onClose }) => {
               required
               value={formData.name}
               onChange={handleChange}
-              className="p-3 leading-4 rounded border border-solid border-neutral-400 w-full focus:border-neutral-500 focus:ring-neutral-500 focus:outline-none"
+              className="p-3 leading-4 rounded-md border border-solid border-neutral-400 w-full focus:border-neutral-500 focus:ring-neutral-500 focus:outline-none"
             />
             <div className="flex items-center">
               <span className="mr-2 text-gray-700 font-spline font-semibold">
@@ -160,7 +160,7 @@ const Demo = ({ open, onClose }) => {
               required
               value={formData.email}
               onChange={handleChange}
-              className="p-3 leading-4 rounded border border-solid border-neutral-400 w-full focus:border-neutral-500 focus:ring-neutral-500 focus:outline-none"
+              className="p-3 leading-4 rounded-md border border-solid border-neutral-400 w-full focus:border-neutral-500 focus:ring-neutral-500 focus:outline-none"
             />
             <div className="flex items-center">
               <span className="mr-2 text-gray-700 font-spline font-semibold">
@@ -215,7 +215,7 @@ const Demo = ({ open, onClose }) => {
             </div>
             <button
               type="submit"
-              className="bg-[#01AFF4] text-white px-2 sm:px-6 py-3 mt-6 mb-10 font-spline text-sm rounded hover:bg-blue-500 transition duration-300 flex cursor-pointer w-full justify-center items-center"
+              className="bg-[#01AFF4] text-white px-2 sm:px-6 py-3 mt-6 mb-10 font-spline text-sm rounded hover:bg-blue-500 transition duration-300 flex cursor-pointer mx-auto w-4/5 md:w-2/3 justify-center items-center"
             >
               <div className="font-spline font-medium">Get a Demo</div>
             </button>
