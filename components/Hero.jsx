@@ -31,12 +31,12 @@ const Hero = () => {
           >
             Gain confidence and improve performance with precise feedback. Our platform leverages advanced technology to enhance interview and evaluation processes. Prepare smarter and excel with our AI-powered assessment solutions.
           </motion.p>
-          <div className="flex w-full  justify-between flex-col ">
+          <div className="flex w-full ">
       <span 
         onClick={() => window.location.href = 'https://smart-grader-app-ts.vercel.app/'}
-        className="bg-blue-700 text-white px-6 py-4 mt-6 mb-10 font-spline text-sm rounded-md hover:bg-blue-800 transition duration-300 flex items-center sm:w-7/12 cursor-pointer "
+        className="bg-[#01AFF4] text-white px-2 sm:px-6 py-3 mt-6 mb-10 font-spline text-md rounded-md hover:bg-blue-500 transition duration-300 flex items-center  cursor-pointer "
       >
-        Get Started with SmartGrader <FaArrowRight className="ml-2" />
+        Get Started with SmartGrader <FaArrowRight className="ml-4" />
       </span>
       
     </div>

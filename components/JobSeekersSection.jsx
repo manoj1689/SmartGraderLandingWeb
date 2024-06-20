@@ -92,14 +92,16 @@ const JobSeekersSection = () => {
           </div>
           <p className="font-light">Watch your interview skills improve with detailed analytics.</p>
         </div>
-          <motion.div 
-            whileHover={{ scale: 1.05 }} 
-            className="flex items-center cursor-pointer justify-center self-start lg:self-start w-2/3 lg:w-2/3 py-2 mt-9 text-sm text-white bg-sky-500 rounded-md border border-sky-500 transition-transform duration-300"
-            onClick={sendIndividualParam}
-          >
-            <span>Start Preparing Today</span>
-            <FaArrowRight className="ml-2" />
-          </motion.div>
+        <motion.div 
+  whileHover={{ scale: 1.05 }} 
+  className="bg-[#01AFF4] text-white px-2 sm:px-6 py-3 mt-6 mb-10 font-spline text-sm rounded-md hover:bg-blue-500 transition duration-300 flex items-center cursor-pointer w-fit"
+  onClick={sendIndividualParam}
+>
+  <span>Start Preparing Today</span>
+  <FaArrowRight className="ml-2" />
+</motion.div>
+       
+       
         </div>
       </div>
     </motion.div>

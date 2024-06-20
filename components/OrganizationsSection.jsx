@@ -91,14 +91,17 @@ const OrganizationsSection = () => {
           <p className="font-light">Make informed hiring decisions with comprehensive reporting.</p>
         </div>
         {/* Content including ticks and texts */}
-        <motion.div 
-          whileHover={{ scale: 1.05 }} 
-          className="flex items-center cursor-pointer justify-center self-start w-max px-4 py-2 mt-9 text-sm text-white bg-sky-500 rounded-md border border-sky-500 transition-transform duration-300 whitespace-nowrap"
-          onClick={sendOrganizatopnParam}
-        >
-          <span>Optimize Your Hiring Process</span>
-          <FaArrowRight className="ml-2" />
-        </motion.div>
+  
+
+<motion.div 
+  whileHover={{ scale: 1.05 }} 
+  className="bg-[#01AFF4] text-white px-2 sm:px-6 py-3 mt-6 mb-10 font-spline text-sm rounded-md hover:bg-blue-500 transition duration-300 flex items-center cursor-pointer w-fit"
+  onClick={sendOrganizatopnParam}
+>
+  <span>Optimize Your Hiring Process</span>
+  <FaArrowRight className="ml-2" />
+</motion.div>
+
       </div>
     </motion.div>
   );
