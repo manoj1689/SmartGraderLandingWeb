@@ -216,7 +216,7 @@ const Demo = ({ open, onClose }) => {
             </div>
             <button
               type="submit"
-              className="bg-[#01AFF4] text-white px-2 sm:px-6 py-3 mt-6 mb-10 font-spline text-sm rounded hover:bg-blue-500 transition duration-300 flex cursor-pointer  w-full sm:w-4/5 md:w-2/3 justify-center items-center"
+              className="bg-[#01AFF4] text-white px-2 sm:px-6 py-3 mt-6 mb-10 font-spline text-sm rounded hover:bg-blue-500 transition duration-300 flex cursor-pointer  w-full sm:w-4/5 lg:w-3/5 justify-center items-center"
             >
               <div className="font-spline font-medium">Get a Demo</div>
             </button>
