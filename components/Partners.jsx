@@ -30,7 +30,7 @@ const Partners = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
             >
-              <img src={logo} alt={`Partner logo ${index + 1}`} className="h-16 transition-transform duration-300 hover:scale-105" />
+              <img src={logo} alt={`Partner logo ${index + 1}`} className="h-auto transition-transform duration-300 hover:scale-105" />
             </motion.div>
           ))}
         </div>
