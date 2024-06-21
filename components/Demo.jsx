@@ -104,11 +104,12 @@ const Demo = ({ open, onClose }) => {
           maxWidth: "1000px",
           width: "90%",
           borderRadius: "5px",
+          
         },
       }}
     >
    
-      <div className="flex flex-col md:flex-row px-2 sm:px-5 py-10 rounded-sm">
+      <div className="flex flex-col md:flex-row px-2 sm:px-5 py-10  rounded-sm">
       
 
         <div className="md:w-1/2 flex flex-col px-2 sm:px-4 ">
@@ -215,7 +216,7 @@ const Demo = ({ open, onClose }) => {
             </div>
             <button
               type="submit"
-              className="bg-[#01AFF4] text-white px-2 sm:px-6 py-3 mt-6 mb-10 font-spline text-sm rounded hover:bg-blue-500 transition duration-300 flex cursor-pointer  w-4/5 md:w-2/3 justify-center items-center"
+              className="bg-[#01AFF4] text-white px-2 sm:px-6 py-3 mt-6 mb-10 font-spline text-sm rounded hover:bg-blue-500 transition duration-300 flex cursor-pointer  w-full sm:w-4/5 md:w-2/3 justify-center items-center"
             >
               <div className="font-spline font-medium">Get a Demo</div>
             </button>
