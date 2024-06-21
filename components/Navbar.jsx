@@ -23,7 +23,7 @@ const Navbar = () => {
       <header className="bg-white shadow-md fixed w-full top-0 z-50">
       <div className=" bg-[#01AFF4] ">
         {" "}
-        <div className="flex flex-col md:flex-row container mx-auto py-1 font-semibold font-spline text-sm text-white justify-between items-center ">
+        <div className="flex flex-col md:flex-row container mx-auto py-1 font-semibold font-spline text-sm  text-white justify-between items-center ">
           <span> Welcome to smart Grader!</span>
           <span className="flex gap-3">
             <span>info@smartgrader.in</span>
@@ -31,13 +31,13 @@ const Navbar = () => {
           </span>
         </div>
       </div>
-      <div className="container mx-auto px-4 flex flex-row justify-between items-center py-4">
+      <div className="container mx-auto px-4 flex flex-row  justify-between items-center py-2 sm:py-4">
         <div className="text-lg font-semibold">
           <span onClick={() => navigate("/")}>
             <img
               src="images/home/smart-logo.png"
               alt="Smart Grader Logo"
-              className=" cursor-pointer w-32 md:w-44"
+              className=" cursor-pointer w-24 sm:w-32 md:w-44"
             />
           </span>
         </div>

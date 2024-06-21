@@ -31,7 +31,7 @@ const MobileMenu = () => {
       
         <li>
           <Link href="https://discord.com/invite/mQeEsStC">
-            <span className="text-gray-900 hover:text-blue-700 transition font-spline duration-300">Joim our Discord</span>
+            <span className="text-gray-900 hover:text-blue-700 transition font-spline duration-300">Join our Discord</span>
           </Link>
         </li>
           <li>
@@ -66,7 +66,7 @@ const MobileMenu = () => {
       </ul>
       <div className=' flex flex-col w-full justify-center items-center' >
   <button
-  className="bg-white border border-sky-500 max-sm:w-11/12 sm:w-7/12 my-3  text-sky-500 hover:bg-sky-500 hover:text-white font-medium font-spline py-2 px-4 rounded transition duration-300 ease-in-out"
+  className="bg-white border border-sky-500 max-sm:w-11/12 sm:w-7/12 my-3  text-sky-500 hover:bg-white hover:text-white font-medium font-spline py-2 px-4 rounded transition duration-300 ease-in-out"
   onClick={()=>window.location.href = 'http://smart-grader-app-ts.vercel.app/signIn'}
 >
   <span className="text-sky-500">Sign In</span>
