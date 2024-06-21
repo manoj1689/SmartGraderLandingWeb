@@ -16,8 +16,8 @@ const MobileMenu = () => {
     <>
       <Demo open={demo} onClose={handleClose} />
       <nav className="lg:hidden shadow-md absolute w-full top-full left-0 bg-blue-100 ">
-        <div className="flex flex-col max-h-[calc(100vh-100px)]">
-          <ul className="flex-grow flex flex-col py-4 space-y-3 overflow-y-auto">
+        <div className="flex flex-col max-h-[calc(100vh-110px)]">
+          <ul className="flex-grow flex flex-col py-5 space-y-2 overflow-y-auto">
             <li className="flex justify-center">
               <span onClick={() => navigate("/")}>
                 <span className="text-gray-900 hover:text-blue-700 font-spline transition duration-300">Home</span>
