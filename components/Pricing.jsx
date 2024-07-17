@@ -1,8 +1,14 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { motion } from 'framer-motion';
 import { FaArrowRight, FaCheckCircle } from 'react-icons/fa'; // Importing icons from react-icons
-
+import ContactUs from "../components/ContactUs"
 const Pricing = () => {
+  const [contactUs,setContactUs]=useState(false)
+ 
+  const handleClose = () => {
+    setContactUs(false);
+    // Optionally, you can navigate back to the homepage or another page
+  };
   const pricingPlans = [
     {
       plan: "Individual",
@@ -41,6 +47,7 @@ const Pricing = () => {
 
   return (
     <section id="pricing" className="bg-gray-100 py-20">
+      <ContactUs open={contactUs} onClose={handleClose}/>
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-medium font-spline text-sky-600">Transparent Pricing for Every Need</h2>
@@ -70,7 +77,8 @@ const Pricing = () => {
               </div>
               <motion.a
                 whileHover={{ scale: 1.05 }}
-                onClick={()=>window.location.href = 'http://smart-grader-app-ts.vercel.app/'}
+               // onClick={()=>window.location.href = 'http://smart-grader-app-ts.vercel.app/'}
+               onClick={()=>setContactUs(true)}
                 className="bg-[#01AFF4] text-white px-4 py-3 text-sm font-spline rounded hover:bg-blue-500 flex items-center justify-center transition-transform duration-300 mt-auto cursor-pointer md:w-10/12"
               >
                 <span className='font-spline'>Get Started</span>
