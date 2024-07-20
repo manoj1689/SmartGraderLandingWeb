@@ -7,7 +7,7 @@ const VideoOverlay = () => {
   const closeOverlay = () => setIsOpen(false);
 
   return (
-    <div className=" w-full sm:w-10/12 mx-auto  sm:py-5">
+    <div className=" w-full sm:w-10/12 mx-auto ">
       <video class="h-full w-full rounded-lg" controls>
     <source
       src="video/demo.mp4"

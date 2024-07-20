@@ -36,29 +36,32 @@ const InstitutionsSection = () => {
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.4 }}
-      className="container mx-auto flex flex-col mb-10 md:flex-row gap-5 max-w-[1250px] px-4"
+      className="container mx-auto flex flex-col mt-12 lg:flex-row gap-5 max-w-[1350px] px-4"
       variants={cardVariants}
       style={{ marginBottom: "20px" }}
     >
-      <div className="w-full md:w-1/2 flex items-center">
+      <div className="md:w-2/3 lg:2/3 xl:w-1/2 mx-auto  flex items-start mt-4">
         <motion.img
           loading="lazy"
           src="/images/home/institutions-banner.png"
-          className="w-full rounded-md lg:px-16 object-cover "
+          className="w-full rounded-md lg:px-12 object-cover "
           alt="Institutions Banner"
         />
       </div>
-      <div className="flex flex-col justify-center w-full md:w-1/2 text-slate-800">
-        <div className="px-4 py-4">
-          <h2 className="text-3xl md:text-4xl font-spline font-medium mb-4 leading-tight">
-            Robust Testing Platform <br /> for Educational Institutions
+      <div className="flex flex-col lg:justify-center w-full lg:w-1/2 text-slate-800">
+        <div className="w-full lg:w-10/12 md:mx-auto px-4 py-4">
+          <h2 className="text-3xl md:text-4xl font-spline font-medium  text-[#2B383D] leading-tight">
+            Robust Testing Platform for Educational Institutions
           </h2>
+          <div className="flex w-full md:mx-auto px-4 justify-center lg:justify-end">
           <img
             loading="lazy"
             src="/images/home/HomeLine.png"
             className="mt-1.5 max-w-full aspect-[14.29] w-[307px]"
           />
-          <div className="mt-8 space-y-4">
+          </div>
+         
+          <div className="my-4 py-4">
             <div className="flex items-center gap-2">
               <img
                 loading="lazy"
@@ -66,9 +69,9 @@ const InstitutionsSection = () => {
                 className="w-6 h-6"
                 alt="Tick Icon"
               />
-              <span className="font-medium">Secure Testing Environment</span>
+              <span className="font-semibold text-slate-700">Secure Testing Environment</span>
             </div>
-            <p className="font-light">
+            <p className="font-light px-2">
               Maintain academic integrity with supervised exams.
             </p>
             <div className="flex items-center gap-2 mt-4">
@@ -78,9 +81,9 @@ const InstitutionsSection = () => {
                 className="w-6 h-6"
                 alt="Tick Icon"
               />
-              <span className="font-medium">Comprehensive Assessments</span>
+              <span className="font-semibold text-slate-700">Comprehensive Assessments</span>
             </div>
-            <p className="font-light">
+            <p className="font-light px-2">
               Test a wide range of subjects with customizable questions.
             </p>
             <div className="flex items-center gap-2 mt-4">
@@ -90,9 +93,9 @@ const InstitutionsSection = () => {
                 className="w-6 h-6"
                 alt="Tick Icon"
               />
-              <span className="font-medium">Automated Grading</span>
+              <span className="font-semibold text-slate-700">Automated Grading</span>
             </div>
-            <p className="font-light">
+            <p className="font-light px-2">
               Save time with accurate and fair AI grading.
             </p>
           </div>

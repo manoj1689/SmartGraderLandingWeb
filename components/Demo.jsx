@@ -40,7 +40,7 @@ const Demo = ({ open, onClose }) => {
       },
     }),
   };
-  
+
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     setFormData({
@@ -51,6 +51,8 @@ const Demo = ({ open, onClose }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+   
+
     const formSubmissionData = {
       ...formData,
       jobRequisitions: selectedJobRequisition,
@@ -70,7 +72,7 @@ const Demo = ({ open, onClose }) => {
       console.error('Error sending email:', error);
       toast.error('Failed to register. Please try again later.');
     }
-
+    // toast.dismiss(); // Close any existing toast messages
     // Reset form data
     setFormData({
       name: "",
@@ -101,7 +103,7 @@ const Demo = ({ open, onClose }) => {
             borderRadius: "5px",
             padding: "1rem",
             overflowY: "auto",
-                     },
+          },
           overlay: {
             display: "flex",
             alignItems: "center",
@@ -228,4 +230,5 @@ const Demo = ({ open, onClose }) => {
 };
 
 export default Demo;
+
 

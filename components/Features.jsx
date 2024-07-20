@@ -22,13 +22,13 @@ const features = [
 
 const Features = () => {
   return (
-    <section id='how-it-works' className="bg-white py-24">
+    <section id='how-it-works' className="bg-sky-200 rounded mt-12 py-16 ">
       <div className="container mx-auto px-4 text-center">
         <motion.h2 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="text-3xl md:text-4xl font-spline  font-medium leading-8  text-gray-900 mb-4"
+          className="text-3xl md:text-4xl font-spline font-medium leading-8  text-[#2B383D] mb-2"
         >
           How Smart Graders Works
         </motion.h2>
@@ -40,7 +40,7 @@ const Features = () => {
         >
           Intuitive. Intelligent. Impactful.
         </motion.p>
-        <div className="flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 md:space-x-8">
+        <div className="flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 md:space-x-4">
           {features.map((feature, index) => (
           <motion.div 
           key={index}
@@ -48,7 +48,7 @@ const Features = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.1, delay: index * 0.1 }}
           whileHover={{ scale: 1.05, translateZ: 0, transformStyle: "preserve-3d" }}
-          className="flex flex-col items-center p-6 bg-blue-50 rounded-lg shadow-md w-full md:w-1/3 transform hover:shadow-lg hover:bg-blue-100 transition duration-300"
+          className="flex flex-col items-center p-6 bg-blue-50 rounded-lg shadow-md w-full md:w-1/3 transform hover:shadow-lg hover:bg-white transition duration-300"
         >
           {feature.icon}
           <div style={{ backfaceVisibility: "hidden" }}> 

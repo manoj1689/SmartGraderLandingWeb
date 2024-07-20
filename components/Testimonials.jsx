@@ -522,6 +522,7 @@ const Testimonials = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+    arrows: false,
     autoplay: true,
     autoplaySpeed: 3000,
     cssEase: "linear",
@@ -529,10 +530,11 @@ const Testimonials = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
           dots: true
+          
         }
       },
       {
@@ -546,17 +548,17 @@ const Testimonials = () => {
   };
 
   return (
-    <section id="testimonials" className="py-20 bg-gray-50 ">
+    <section id="testimonials" className="my-12 py-12 bg-sky-200 rounded ">
       <div className="container mx-auto px-4 ">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-medium font-spline text-sky-600">Hear From Our Satisfied Users</h2>
+          <h2 className="text-3xl md:text-4xl font-medium font-spline text-[#2B383D]">Hear From Our Satisfied Users</h2>
         </div>
-        <Slider {...settings} className="testimonial-slider ">
+        <Slider {...settings} className="testimonial-slider  ">
           {testimonials.map((testimonial, index) => (
             <div className='flex flex-col gap-[20%] h-min'>
             <motion.div
               key={index}
-              className="testimonial-card flex flex-col justify-between mx-4 px-6 text-center p-6 bg-white shadow-lg rounded-lg border border-gray-200 transition duration-300 transform hover:scale-105 h-[450px] "
+              className="testimonial-card flex flex-col justify-between m-4 px-6 text-center p-6 bg-white shadow-lg rounded-lg border border-gray-200 transition duration-300 transform hover:scale-105 h-[450px] "
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}

@@ -5,17 +5,17 @@ import Link from "next/link"; // Importing Link for navigation
 import IntroVideo from "../components/IntroVideo"
 const Hero = () => {
   return (
-    <section className="my-10 pt-16">
-      <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center">
-        <div className="w-full lg:w-5/12 mb-8 lg:mb-0 px-4">
+    <section className="mt-12 pt-16">
+      <div className="container mx-auto px-4  flex flex-col lg:flex-row items-center">
+        <div className="w-full lg:1/2  xl:w-5/12 lg:mb-0 ">
           <motion.div 
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             className="relative flex-col items-center"
           >
-            <div className="w-full text-6xl font-spline text-slate-800 max-md:max-w-full max-md:text-4xl">
-              Cultivate Confidence. Ace Interviews & Assessment.
+            <div className="w-full text-6xl font-spline font-medium text-slate-800 max-md:max-w-full max-xl:text-5xl">
+              Cultivate Confidence.<br/> Ace Interviews & Assessment.
             </div>
             <img
               loading="lazy"
@@ -27,7 +27,7 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
-            className="mt-3 w-full text-lg leading-6  font-spline font-thin text-neutral-600 max-md:max-w-full"
+            className="mt-3 w-full text-lg  max-xl:text-sm leading-6  font-spline font-thin text-neutral-600 max-md:max-w-full"
           >
             Gain confidence and improve performance with precise feedback. Our platform leverages advanced technology to enhance interview and evaluation processes. Prepare smarter and excel with our AI-powered assessment solutions.
           </motion.p>
@@ -46,7 +46,7 @@ const Hero = () => {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
-          className="w-full lg:w-7/12 mt-10 flex justify-center"
+          className="w-full lg:1/2 xl:w-7/12  flex items-center justify-end"
         >
           <img src="/images/home/hero-image.png" alt="Designed For Interview" className="w-full md:w-3/4" />
         </motion.div>

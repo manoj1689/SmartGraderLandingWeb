@@ -46,14 +46,14 @@ const Pricing = () => {
   ];
 
   return (
-    <section id="pricing" className="bg-gray-100 py-20">
+    <section id="pricing" className="bg-sky-200 rounded  my-12 py-12">
       <ContactUs open={contactUs} onClose={handleClose}/>
-      <div className="container mx-auto px-4">
+      <div className="px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-medium font-spline text-sky-600">Transparent Pricing for Every Need</h2>
+          <h2 className="text-3xl md:text-4xl font-medium font-spline text-[#2B383D]">Transparent Pricing for Every Need</h2>
           <p className="text-lg text-gray-700 font-spline mt-2">Choose a plan that fits your needs.</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
           {pricingPlans.map((pricing, index) => (
             <motion.div
               key={index}
@@ -79,7 +79,7 @@ const Pricing = () => {
                 whileHover={{ scale: 1.05 }}
                // onClick={()=>window.location.href = 'http://smart-grader-app-ts.vercel.app/'}
                onClick={()=>setContactUs(true)}
-                className="bg-[#01AFF4] text-white px-4 py-3 text-sm font-spline rounded hover:bg-blue-500 flex items-center justify-center transition-transform duration-300 mt-auto cursor-pointer md:w-10/12"
+                className="bg-[#01AFF4] text-white px-4 py-3 text-sm font-spline rounded hover:bg-blue-500 flex items-center justify-center transition-transform duration-300 mt-auto cursor-pointer "
               >
                 <span className='font-spline'>Get Started</span>
                 <FaArrowRight className="ml-2" />

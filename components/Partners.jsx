@@ -15,10 +15,10 @@ const Partners = () => {
   ];
 
   return (
-    <section id="partners" className="py-20 bg-white">
+    <section id="partners" className="my-12 py-12 bg-sky-200 rounded shadow-sm">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-medium font-spline text-sky-600">Trusted by Leading Entities</h2>
+          <h2 className="text-3xl md:text-4xl font-medium font-spline text-[#2B383D]">Trusted by Leading Entities</h2>
           <p className="text-lg text-gray-700 font-spline mt-2">Join our network of esteemed partners who have revolutionized their processes with SmartGrader.</p>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
