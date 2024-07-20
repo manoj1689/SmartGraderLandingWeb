@@ -113,7 +113,7 @@ const Demo = ({ open, onClose }) => {
         }}
       >
         <div className="flex flex-col md:flex-row px-2 sm:px-5 py-10 rounded-sm">
-          <div className="md:w-1/2 flex flex-col bg-sky-200 rounded px-2 sm:px-4">
+          <div className="md:w-1/2 flex flex-col bg-sky-200 rounded p-4 sm:px-4">
             <img
               src="images/home/smart-logo.png"
               alt="Smart Grader Logo"

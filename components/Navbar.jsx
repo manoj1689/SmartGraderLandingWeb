@@ -35,7 +35,7 @@ const Navbar = () => {
         <div className="text-lg font-semibold">
           <span onClick={() => navigate("/")}>
             <img
-              src="images/home/smart-logo.png"
+              src="images/home/smart-logo1.png"
               alt="Smart Grader Logo"
               className=" cursor-pointer w-28  md:w-32 lg:w-44"
             />
